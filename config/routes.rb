@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :sharks
+
+  resources :sharks do
+    resources :posts
+  end
 
   root 'sharks#index'
 end
