@@ -1,9 +1,9 @@
 <ul>
-  <% @shark.posts.each do |post|  %>
-  <li class="post">
-      <%= post.body %>
-      <%= button_tag "Remove Post", data: { controller: "posts", action: "posts#remove" } %>
-      <%= button_tag "Upvote Post", data: { controller: "posts", action: "posts#upvote" } %>
-  </li>
+  <% for post in @shark.posts  %>
+    <li class="post">
+        <%= post.body %>
+        <%= button_tag "Remove Post", data: { controller: "posts", action: "posts#remove" } %>
+        <%= button_tag "Upvote Post", data: { controller: "posts", action: "posts#upvote" } %>
+    </li>
   <% end %>
 </ul>
